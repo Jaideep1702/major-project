@@ -10,9 +10,9 @@
   --clr-white: #FFFFFF;
   --clr-black: #202020;
   --clr-grey: #707070;
-  --clr-blue: #6C63FF;
-  --clr-blue-2: #4c46b6;
-  --clr-green: #4fb646;
+  --clr-blue: hsl(25, 84%, 61%);
+  --clr-blue-2: #FFBB70;
+  --clr-green: #FFEC9E;
 }
 
 body {
@@ -20,6 +20,7 @@ body {
   font-family: "Open Sans";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #FFFBDA;
 }
 
 /* ------------------------------------------------------ */
@@ -29,6 +30,7 @@ nav {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: center;
+  padding: 0 100px;
 }
 
 .nav__brand {
@@ -45,7 +47,7 @@ nav {
 }
 
 .nav__brand h1 {
-  color: var(--clr-blue);
+  color: hsl(25, 84%, 61%);
   font-size: 2.5em;
   font-weight: 800;
 }
@@ -68,15 +70,16 @@ nav {
 }
 
 .nav__links li a:hover {
-  color: var(--clr-blue);
+  color: #FFBB70;
 }
 
 .nav__connect {
   width: 175px;
   height: 50px;
-  margin: 0 auto;
+  /* margin: 0 auto; */
+  justify-self:right ;
 
-  background-color: var(--clr-blue);
+  background-color: #ED9455;
   color: var(--clr-white);
 
   border: none;
@@ -91,14 +94,14 @@ nav {
 }
 
 .nav__connect:hover {
-  background-color: var(--clr-blue-2);
+  background-color: #FFBB70;
 }
 
 /* ------------------------------------------------------ */
 /* -- HEADER -- */
 
 header {
-  background-image: url("./assets/houses.png");
+  background-image: url("./assets/houses1.png");
   background-position: center;
   background-size: cover;
   min-height: 40vh;
@@ -142,10 +145,15 @@ header {
 /* ------------------------------------------------------ */
 /* -- CARDS -- */
 
-.cards__section {
+.cards__container {
+  background: burlywood;
   max-width: 1200px;
-  margin: 0 auto;
   padding: 0 20px;
+}
+
+.cards__section {
+  padding: 0 auto;
+  text-align: center;
 }
 
 .cards__section h3 {
